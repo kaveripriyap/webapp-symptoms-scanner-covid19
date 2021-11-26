@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" >
+    
+<head>
+    <meta charset="UTF-8">
+    <title>2D DDW WebApp</title>
+    <link rel="stylesheet" href="templates/style.css">
+</head>
+
+<body>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap-grid.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap" rel="stylesheet">
+
+<!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-frame">
+                
+                <figure class="pageLogo">
+                    <img src="templates/img/svg_1.svg" class="pageLogo__image" alt="LOGO">
+                </figure>
+                <div class="open-menu" id="open-menu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <nav class="nav-links" id="nav-links">
+                    <a href="#scanner" class="nav-link">COVID-19 Scanner</a>
+                    <a href="#symptoms" class="nav-link">Symptoms</a>
+                    <a href="#contagion" class="nav-link">Contagion</a>
+                    <a href="#prevention" class="nav-link">Prevention</a>
+                    <a href="#contact" class="nav-link">Reach Us!</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!--COVİD-19 Symptom Scanner Overview-->
+        <section class="section hero" id="home">
+            <br><br><br><br>
+            <div class="container">
+                <div class="row direction">
+                    <div class="col-12 col-md-6 col-lg-6 text-position" >
+                        <h2 class="section__title">COVID-19 Symptoms Scanner</h2>
+                        <span class="section__span">Let's do our part in keeping our community safe!</span>
+                        <p class="section__desc">We aim to help to indicate whether or not you have COVID-19 based on your preliminary symptoms and to advise further steps.</p>
+                        <a href="#" class="section__button seciton__button--center">Let us help</a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 text-position">
+                        <img src="templates/img/svg_2.svg" class="section__image" alt="Quarantine">
+                        <img src="templates/img/svg_3.svg" class="section__virus1" alt="">
+                        <img src="templates/img/svg_3.svg" class="section__virus2" alt="">
+                        <img src="templates/img/svg_3.svg" class="section__virus3" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>   
+
+        <!--COVID-19 Symptoms Scanner-->
+        <section class="section coronavirus" id="scanner">
+            <br><br><br><br><br><br><br><br><br><br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6 text-position">
+                        <figure class="covidImage">
+                            <img src="templates/img/img_1.png" class="covidImage__image" alt="Corona Virus">
+                        </figure>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 text-position">
+                        <h1 class="coronavirus__title">What Are Your Current Symptoms?</h1>
+                        <span class="coronavirus__span">COVID-19 Symptoms Scanner</span>
+                        <p class="coronavirus__desc">
+                            <br> 
+                            <form action="{{url_for('predict')}}" method="post">
+                                <select name ="scanner" multiple data-placeholder="Select your symptoms">
+                                    <option name="symptom" value="Dry Cough_Yes">Dry Cough</option>
+                                    <option name="symptom" value="Fever_Yes">Fever</option>
+                                    <option name="symptom" value="Breathing Problems_Yes">Breathing Problems</option>
+                                    <option name="symptom" value="Sore Throat_Yes">Sore Throat</option>
+                                    <option name="symptom" value="Hyper Tension_Yes">Hyper Tension</option>
+                                </select>
+                                <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script> 
+                                
+                                <button 
+                                    class="coronavirus__button"
+                                    id="submit_symptoms">
+                                    Check Scanner!
+                                </button>
+                                
+                            </form><br><br><br><br><br>
+                            <h3 class="coronavirus__prediction">{{covid_yes_no}}</h3>
+                            </p><br>
+                    </div>
+                </div>
+
+            </div>
+            <br><br><br><br><br><br><br>
+        </section>
+
+        <!-- Symptoms -->
+        <section class="symptoms" id="symptoms">
+            <div class="container">
+                <div class="upside top">
+                    <br>
+                    <h2 class="upside__title">Covid-19</h2>
+                    <span class="upside__span">Symptoms</span>
+                    <p class="upside__desc">
+
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-12">
+                        <figure class="symptoms__figure">
+                            <img src="templates/img/img_5.png" class="symptoms__image" alt="">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <br><br><br><br><br>
+        </section>
+
+        <!--Contagion-->
+        <section class="section contagion" id="contagion">
+            <br><br><br><br><br>
+            <div class="container">
+                <div class="upside upside--top">
+                    <h2 class="upside__title">COVID-19</h2>
+                    <span class="upside__span">How Does It Spread?</span>
+                    <p class="upside__desc">
+
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <figure class="card__figure">
+                                <img src="templates/img/img_2.png" class="card__image" alt="">
+                            </figure>
+                            <h3 class="card__title">Air Transmission</h3>
+                            <p class="card__desc"> 
+                                The risk is generally higher indoors as ventilation and air exchange play a role in transmission. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <figure class="card__figure">
+                                <img src="templates/img/img_3.png" class="card__image" alt="">
+                            </figure>
+                            <h3 class="card__title">Human Contact</h3>
+                            <p class="card__desc">
+                                Washing your hands is one of the simplest ways in which you can protect yourself.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <figure class="card__figure">
+                                <img src="templates/img/img_4.png" class="card__image" alt="">
+                            </figure>
+                            <h3 class="card__title">Contained Objects</h3>
+                            <p class="card__desc">
+                                Use a clean tissue while sneezing. In this way, you can contain transmission through droplets.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prevention -->
+        <section class="prevention" id="prevention">
+            <br><br>
+            <div class="container">
+                <div class="upside">
+                    <h2 class="upside__title">COVID-19</h2>
+                    <span class="upside__span">How can we prevent it?</span>
+                    <p class="upside__desc">
+
+                    </p>
+                </div>
+                <div class="row row-position">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <span class="prevention__span"><span class="prevention__number">01</span> Wear A Mask</span>
+                        <p class="prevention__desc">
+
+                        </p>       
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 ">
+                        <figure class="prevention__figure">
+                            <img src="templates/img/img_6.png" class="prevention__image" alt="">
+                        </figure>
+                    </div>                    
+                </div>
+                <div class="row row-position">
+                    <div class="col-12 col-md-6 col-lg-6 ">
+                        <span class="prevention__span"><span class="prevention__number">02</span>Clean Your Hands</span>
+                        <p class="prevention__desc">
+
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <figure class="prevention__figure">
+                            <img src="templates/img/img_7.png" class="prevention__image" alt="">
+                        </figure>
+                    </div>                    
+                </div>
+                <div class="row row-position">
+                    <div class="col-12 col-md-6 col-lg-6 ">
+                        <span class="prevention__span"><span class="prevention__number">03</span>Use clean tissues</span>
+                        <p class="prevention__desc">
+
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 ">
+                        <figure class="prevention__figure">
+                            <img src="templates/img/img_8.png" class="prevention__image" alt="">
+                        </figure>
+                    </div>                    
+                </div>
+                <div class="row row-position">
+                    <div class="col-12 col-md-6 col-lg-6 ">
+                        <span class="prevention__span"><span class="prevention__number">04</span>Keep a safe distance</span>
+                        <p class="prevention__desc">
+
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <figure class="prevention__figure">
+                            <img src="templates/img/img_9.png" class="prevention__image" alt="">
+                        </figure>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="help">
+                    <p class="help__desc">
+                        Any questions you'd like to ask us?
+                    </p>
+                    <form action="">
+                        <input type="email" class="help__mail" placeholder="yourname@gmail.com" required>
+                        <button type="submit" class="help__send">Send!</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+       
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row align-center">
+                    <div class="col-12 col-md-3 col-lg-3">
+                        <figure class="logo-figure">
+                            <img src="templates/img/svg_1.svg" class="footer__logo" alt="">
+                        </figure>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6r">
+                        <a href="#scanner" class="footer__link">COVID-19 Scanner</a>
+                        <a href="#symptoms" class="footer__link">Symptoms</a>
+                        <a href="#contagion" class="footer__link">Contagion</a>
+                        <a href="#prevention" class="footer__link">Prevention</a>
+                        <a href="#contact" class="footer__link">Reach Us!</a>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-3">
+                        <figure class="social-figure">
+                            <a href="https://www.facebook.com/" target="_blank"><img src="templates/img/facebook.svg" alt="Facebook"></a>
+                            <a href="https://www.youtube.com/" target="_blank"><img src="templates/img/youtube.svg" alt="Youtube"></a> 
+                            <a href="https://www.vimeo.com/" target="_blank"><img src="templates/img/vimeo.svg" alt="Vimeo"></a>
+                            <a href="https://www.twitter.com/" target="_blank"><img src="templates/img/twitter.svg" alt="Twitter"></a>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+<!-- partial -->
+  <script  src="templates/script.js"></script>
+
+</body>
+</html>
