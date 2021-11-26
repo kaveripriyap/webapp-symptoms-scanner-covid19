@@ -8,6 +8,9 @@ SC03 Group 9
 
 All group members contributed equally to this project. :)
 
+### Visuals of our WebApp
+![Overview](templates/img_10.png)
+
 ### Setup of the WebApp
 
 Take note of the following directions to run our WebApp on Vocareum.
