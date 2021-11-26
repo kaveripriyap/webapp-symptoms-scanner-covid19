@@ -9,7 +9,10 @@ SC03 Group 9
 All group members contributed equally to this project. :)
 
 ### Visuals of our WebApp
+
 ![Overview](templates/img/img_10.PNG)
+
+![Scanner](templates/img/img_11.PNG)
 
 ### Setup of the WebApp
 
