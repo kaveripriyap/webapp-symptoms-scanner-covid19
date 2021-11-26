@@ -6,6 +6,8 @@ SC03 Group 9
 - Chen Jiasen
 - Jolin Teo Hui Lyn
 
+All group members contributed equally to this project. :)
+
 ### Setup of the WebApp
 
 Take note of the following directions to run our WebApp on Vocareum.
