@@ -14,6 +14,11 @@ All group members contributed equally to this project. :)
 
 ![Scanner](templates/img/img_11.PNG)
 
+![Symptoms](templates/img/img_12.PNG)
+
+![Contagion](templates/img/img_13.PNG)
+
+
 ### Setup of the WebApp
 
 Take note of the following directions to run our WebApp on Vocareum.
