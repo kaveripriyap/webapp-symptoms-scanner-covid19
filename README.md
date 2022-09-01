@@ -1,13 +1,5 @@
 # 2D Project DDW Bonus WebApp
 
-SC03 Group 9
-- Kaveri Priya Putti
-- Mah Yi Da
-- Chen Jiasen
-- Jolin Teo Hui Lyn
-
-All group members contributed equally to this project. :)
-
 ### Visuals of our WebApp
 
 ![Overview](templates/img/img_10.PNG)
